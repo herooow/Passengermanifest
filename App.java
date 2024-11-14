@@ -6,7 +6,10 @@ public class App {
     static Passenger[] seats = new Passenger[MAX_SEATS];
     static Scanner scan = new Scanner(System.in); //scan introduces new scanner
     public static void main(String[] args) {
-
+         // Initialize seats
+        for (int i = 0; i < MAX_SEATS; i++) {
+            seats[i] = new Passenger("", 0);
+        }
         // Start of the program
         boolean running = true;
         while (running) {
@@ -43,10 +46,7 @@ public class App {
                     break;
             }
         }
-        // Initialize seats
-        for (int i = 0; i < MAX_SEATS; i++) {
-            seats[i] = new Passenger("", 0);
-        }
+       
     }
 
     // Insert passenger
